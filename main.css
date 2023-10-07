@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo',sans-serif;
+}
+
+body{
+    background: rgb(173,196,206);
+    background: linear-gradient(90deg, rgba(173,196,206,1) 0%, rgba(241,240,232,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.container{
+    width: calc(1440px - 150 *2px);
+    padding:  0 15px;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden; 
+}
+.container > h1{
+    color: #80A0AF;
+    text-align: center;
+    background-color: #ffffff;
+    width: fit-content;
+    padding: 20px;
+    align-self: center;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    font-size: 40px;
+}
+.container .box{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.container .box > div{
+    width: 50%
+}
+.container .box .image img{
+    width: 90%;
+}
+.container .box .task :is(form,.result){
+    background-color: #ffffff;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius:8px ;
+    width: 100%;
+}
+.container .box .task .title{
+    width: 100%;
+    text-align: center;
+    color: #80A0AF;
+    font-size: 30px;
+    margin-bottom: 20px;
+} 
+.container .box .task form {
+    height: 195px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.container .box .task form [type="text"]{
+    border: 2px solid #ddd;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-right: 10px;
+    background-color: #F9F9F9;
+    height: 40px; 
+    width: 80%;
+    max-width: 400px;
+    transition: border-color 0.3s;
+}
+.container .box .task form [type="text"]:focus{
+    outline: none;
+    border-color: #96B6C5;
+}
+.container .box .task form button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #80A0AF;
+    border:none ;
+    cursor: pointer;
+}
+.result > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    width: 100%;
+}
+.result > div :nth-child(1){
+    display: flex;
+    align-items: center;
+}
+.result > div p{
+    color: #80A0AF;
+    font-size: 20px;
+    font-weight: bold;
+    justify-self: flex-start;
+    margin-left: 15px;
+}
+.result > div .delete-icon{
+    justify-self: flex-end;
+    cursor: pointer;;
+}
+
+@media (max-width:426px) {
+    .container .box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .box > div{
+        width: 100%;
+    }
+    .container .box .image{
+        display: none;
+    }
+    .container .box .image img{
+        width: 70%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: visible;
+        height: unset;
+    }
+    
+}
